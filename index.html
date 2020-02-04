@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Brief History of the Nintendo Gameboy</title>
+</head>
+
+<style>
+
+/*General CSS*/
+body {
+	background-color: #2F2D2C;
+	font-family: 'Lucida Sans Unicode';
+	color: #D0D2D3;
+	font-size: 16px;
+}
+#navigation {
+	width: 50px;
+	height: 300px;
+	background-color: #2F2D2C;
+	position: absolute;
+	top: 178px;
+}
+#page1 {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #6EE5DE;
+	position: absolute;
+	top: 0px;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#page2 {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #D1CA6B;
+	position: absolute;
+	top: 30px;
+	opacity: .25;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#page3 {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #C777BF;
+	position: absolute;
+	top: 60px;
+	opacity: .25;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#page4 {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #278BD7;
+	position: absolute;
+	top: 90px;
+	opacity: .25;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#page2:hover, #page3:hover, #page4:hover {
+	opacity: 1;
+}
+#past #navigation #page1{
+	opacity: .25;
+}
+#past #navigation #page1:hover{
+	opacity: 1;
+}
+#past #navigation #page2{
+	opacity: 1;
+}
+#present #navigation #page1{
+	opacity: .25;
+}
+#present #navigation #page1:hover {
+	opacity: 1;
+}
+#present #navigation #page2{
+	opacity: .25;
+}
+#present #navigation #page2:hover{
+	opacity: 1;
+}
+#present #navigation #page3{
+	opacity: 1;
+}
+#future #navigation #page1{
+	opacity: .25;
+}
+#future #navigation #page1:hover {
+	opacity: 1;
+}
+#future #navigation #page3{
+	opacity: .25;
+}
+#future #navigation #page3:hover{
+	opacity: 1;
+}
+#future #navigation #page4{
+	opacity: 1;
+}
+
+/*Landing page CSS*/
+#title-page {
+	width: 1200px;
+	height: 800px;
+	background-color: #2F2D2C;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+#title {
+	display: block;
+	width: 698px;
+	height: 232px;
+	top: 178px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(title-animation.gif);
+}
+
+/*Past page CSS*/
+#past {
+	width: 1200px;
+	height: 800px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+}
+#past-title {
+	width: 1072.5px;
+	height: 54px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#past-title img {
+	display: block;
+	height: 54px;
+	width: 232px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 40px;
+}
+#past-content {
+	width: 1150px;
+	height: 800px;
+	position: absolute;
+	left: 50px;
+}
+#systems {
+	width: 1072.5px;
+	height: 460px;
+	position: absolute;
+	top: 178px;
+	left: 77.5px;
+}
+/*image 1*/
+#image1 {
+	width: 280px;
+	height: 460px;	
+	position: absolute;
+	left: 0px;
+	color: #D0D2D3;
+}
+.slide-out {
+	display: block;
+	width: 280px;
+	height: 460px;
+	position: relative;
+	background-image: url(gameboy-lit.gif);
+	-webkit-transition: all 200ms ease-in-out;
+}
+.slide-in {
+	z-index: -1;
+	display: block;
+	top: 0px;
+	height: 460px;
+	width: 280px;
+	position: absolute;
+	-webkit-transition: all 200ms ease-in-out;
+}
+.slide-in p {
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+	text-align: left;
+}
+.slide-in h1{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top:60px;
+	left: 30px;
+	text-align: left;
+	color: #6EE5DE;
+}
+.slide-in h2{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: left;
+}
+.slide-in {
+	opacity: 0;
+}
+#image1:hover .slide-out {
+	z-index: -2;
+	opacity: 0;
+}
+#image1:hover .slide-in {
+	opacity: 1;
+}
+/*image 2*/
+#image2 {
+	width: 280px;
+	height: 460px;
+	position: absolute;
+	left: 357.5px;
+}
+.slide--out {
+	display: block;
+	width: 280px;
+	height: 460px;
+	position: relative;
+	background-image: url(gameboy-pocket.jpg);
+	-webkit-transition: all 200ms ease-in-out;
+}
+.slide--in {
+	z-index: -1;
+	display: block;
+	top: 0px;
+	height: 460px;
+	width: 280px;
+	position: absolute;
+	-webkit-transition: all 200ms ease-in-out;
+}
+.slide--in p {
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+	text-align: left;
+}
+.slide--in h1{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top:60px;
+	left: 30px;
+	text-align: left;
+	color: #D1CA6B;
+}
+.slide--in h2{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: left;
+}
+.slide-in-- {
+	opacity: 0;
+}
+#image2:hover .slide--out {
+	z-index: -2;
+	opacity: 0;
+}
+#image2:hover .slide--in {
+	opacity: 1;
+}
+/*image 3*/
+#image3 {
+	width: 280px;
+	height: 460px;
+	position: absolute;
+	left: 715px;
+}
+.slide---out {
+	display: block;
+	width: 280px;
+	height: 460px;
+	position: relative;
+	background-image: url(gameboy-color-animation.gif);
+	-webkit-transition: all 200ms ease-in-out;
+}
+.slide---in {
+	z-index: -1;
+	display: block;
+	top: 0px;
+	height: 460px;
+	width: 280px;
+	position: absolute;
+	-webkit-transition: all 200ms ease-in-out;
+}
+.slide---in p {
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+	text-align: left;
+}
+.slide---in h1{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top:60px;
+	left: 30px;
+	text-align: left;
+	color: #C777BF;
+}
+.slide---in h2{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: left;
+}
+.slide-in--- {
+	opacity: 0;
+}
+#image3:hover .slide---out {
+	z-index: -2;
+	opacity: 0;
+}
+#image3:hover .slide---in {
+	opacity: 1;
+}
+
+/*Present page CSS*/
+#present {
+	width: 1200px;
+	height: 800px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+	text-align: justify;
+}
+#present-content {
+	width: 1150px;
+	height: 800px;
+	position: absolute;
+	left: 50px;
+}
+#present #systems {
+	width: 1072.5px;
+	height: 460px;
+	position: absolute;
+	top: 178px;
+	left: 77.5px;
+}
+#text-1{
+	display: block;
+	width: 280px;
+	height: 460px;
+	position: relative;
+}
+#text-1 p {
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+	text-align: left;
+}
+#text-1 h1{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top:60px;
+	left: 30px;
+	text-align: left;
+	color: #C777BF;
+}
+#text-1 h2{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: left;
+}
+#text-2{
+	display: block;
+	width: 280px;
+	height: 460px;
+	position: absolute;
+	top: 0px;
+	left: 792.5px;
+}
+#text-2 p {
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+	text-align: right;
+}
+#text-2 h1{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top:60px;
+	left: 30px;
+	text-align: right;
+	color: #C777BF;
+}
+#text-2 h2{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: right;
+}
+#image-block-1{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	background-color: gray;
+	position: absolute;
+	top: 100px;
+	left: 280px;
+}
+#image-block-2{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	background-color: white;
+	position: absolute;
+	top: 100px;
+	left: 536.25px;
+
+}
+#present-title {
+	width: 1072.5px;
+	height: 54px;
+	position: absolute;
+	left: 77.5px;
+}
+#present-title img {
+	display: block;
+	height: 54px;
+	width: 400px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 40px;
+}
+
+/*Future page CSS*/
+#future {
+	width: 1200px;
+	height: 800px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+}
+#future-content {
+	width: 1150px;
+	height: 800px;
+	position: absolute;
+	left: 50px;
+}
+#future #systems {
+	width: 1072.5px;
+	height: 460px;
+	position: absolute;
+	top: 178px;
+	left: 77.5px;
+}
+#future #text-1{
+	display: block;
+	width: 280px;
+	height: 460px;
+	position: relative;
+	left: 268.125px;
+	opacity: .4;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#future #text-1 p {
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+	text-align: left;
+}
+#future #text-1 h1{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top:60px;
+	left: 30px;
+	text-align: left;
+	color: #D0D2D3;
+}
+#future #text-1 h2{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: left;
+}
+#future #text-2{
+	background-color: orange;
+	z-index: 1;
+	display: block;
+	width: 280px;
+	height: 460px;
+	position: relative;
+	left: 524.375px;
+	opacity: 1;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#future #text-2 p {
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+	text-align: left;
+}
+#future #text-2 h1{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top:60px;
+	left: 30px;
+	text-align: left;
+	color: #D0D2D3;
+}
+#future #text-2 h2{
+	margin: 0;
+	height: 70px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: left;
+}
+#future #image-block-1{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	background-color: gray;
+	position: absolute;
+	top: 60px;
+	left: 280px;
+}
+#future #image-block-1 img{
+	-webkit-transform: scaleX(-1);
+}
+#future #image-block-2{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	background-color: gray;
+	position: absolute;
+	top: 60px;
+	left: 23.75px;
+}
+#future #image-block-3{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	position: absolute;
+	top: 60px;
+	left: 536.25px;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#future #image-block-3 a{
+	text-decoration: none;
+	color: #D0D2D3;
+}
+#image-block-3:hover{
+	opacity: 1;
+}
+#future #image-block-3 h2{
+	opacity: 1;
+	margin: 0;
+	height: 20px;
+	width: 230px;
+	position: relative;
+	top: 10px;
+	left: 30px;
+	text-align: left
+}
+#future #image-block-3 p{
+	opacity: 1;
+	margin: 0;
+	height: 450px;
+	width: 230px;
+	position: relative;
+	top: 40px;
+	left: 30px;
+	text-align: left
+}
+#future #image-block-4{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	background-color: gray;
+	position: absolute;
+	top: 60px;
+	left: 792.5px;
+}
+#overlay {
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	background-color: #239BC9;
+	opacity: .8;
+	position: absolute;
+	top: 60px;
+	left: 280px;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#overlay2{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	background-color: #239BC9;
+	opacity: .8;
+	position: absolute;
+	top: 60px;
+	left: 536.25px;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#overlay-text{
+	display: block;
+	width: 256.25px;
+	height: 256.25px;
+	opacity: .4;
+	position: absolute;
+	top: 60px;
+	left: 536.25px;
+	-webkit-transition: all 100ms ease-in-out;
+}
+#overlay-text a{
+	text-decoration: underline;
+	color: #D0D2D3;
+}
+#overlay-text a:hover{
+		opacity: .6;
+}
+#overlay-text h1{
+	position: relative;
+	margin: 0px;
+	top: 0px;
+	left: 30px;
+}
+#overlay-text p{
+	position: relative;
+	margin: 0px;
+	top: 20px;
+	left: 30px;
+}
+#overlay-text:hover {
+	opacity: 1;
+}
+#future #text-1:hover{
+	opacity: 1;
+}
+#future #text-2:hover{
+	opacity: 1;
+}
+#future-title {
+	width: 1072.5px;
+	height: 54px;
+	position: absolute;
+	left: 77.5px;
+}
+#future-title img {
+	display: block;
+	height: 54px;
+	width: 400px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 40px;
+}
+</style>
+
+<body>
+
+	<!-- LANDING PAGE -->
+	<div id="title-page">
+	    <div id="title"></div>
+	    <div id="navigation">
+	    	<a href="#title-page"><div id="page1"></div></a>
+	    	<a href="#past"><div id="page2"></div></a>
+			<a href="#present"><div id="page3"></div></a>
+	    	<a href="#future"><div id="page4"></div></a>
+	    </div>
+	</div>
+
+	<!-- PAST -->
+	<div id="past">
+		 
+		 <div id="navigation">
+	    	<a href="#title-page" ><div id="page1"></div></a>
+	    	<a href="#past"><div id="page2"></div></a>
+	    	<a href="#present"><div id="page3"></div></a>
+	    	<a href="#future"><div id="page4"></div></a>
+	    </div>
+
+	    <div id="past-content">
+	    	
+	    	<div id="past-title">
+	    		<img src="past.jpg">
+	    	</div>
+
+	    	<div id="systems">
+	    		<div id="image1">
+	    			<span class="slide-out">
+					</span>
+					<span class="slide-in">	<h1>1989</h1><h2>Gameboy</h2><p>The Gameboy was first released in the year of 1989, becoming Nintendo's first successful handheld system. Since its release the Gameboy has evolved.</p>
+					</span>
+	    		</div>
+
+	    		<div id="image2">
+	    			<span class="slide--out">
+					</span>
+					<span class="slide--in">	<h1>1996</h1><h2>Gameboy Pocket</h2><p>Seven years after the initial release of the Gameboy, Nintendo released a slightly smaller, more lighter version of the Gameboy calling it the Gameboy Pocket.</p>				
+					</span>
+	    		</div>
+
+	    		<div id="image3">
+	    			<span class="slide---out">
+					</span>
+					<span class="slide---in">	<h1>1998</h1><h2>Gameboy Color</h2><p>With the release of the Gameboy Color in 1998 not only did the Gameboy get a redesign, but the games played on the handheld receieved an upgrade. Games for the Gameboy Color were able to display 56 different colors on the screen simultaneously.</p>
+					</span>
+	    		</div>
+
+	    	</div>
+	    </div>
+	</div>
+
+	<!-- PRESENT -->
+	<div id="present">
+		<div id="present-content">
+			<div id="present-title">
+	    		<img src="present-title.jpg">
+	    	</div>
+	    	<div id="systems">
+	    		<div id="text-1"> 
+	    			<h1>2006</h1><h2>DS Lite</h2><p>In 2006, the Nintendo DS Lite was released as a lighter more sleek redesign of the original
+	    			Nitendo DS. The Nintendo DS Lite serves as a model for today's most recent iterations. The Nintendo DS Lite model has dual screens and a hinge that allows the system to open and close. Along with dual screens the Nintendo DS comes 
+	    			with a stylus allowing for touch capabilites. </p>
+	    		</div>
+	    		<div id="text-2"> 
+	    			<h1>2011</h1><h2>3DS</h2><p>The Nintendo 3DS was released in 2011. The main feature of the Nintendo 3DS is its 3D capability. Today in 2015, the 3DS is arguably Nintendo's most popuplar handheld system. The capability for wifi has allowed Nintendo to venture into the release of games through a digital platform. Most notably, the release of games that were created for the original Gameboy. </p>
+	    		</div>
+	    		<div id="image-block-1">
+	    			<img src="ds-lite.gif" width="256.25" height="256.25">
+	    		</div>
+	    		<div id="image-block-2">
+	    			<img src="3ds.jpg" width="256.25" height="256.25">
+  		</div>
+	    	</div>
+	    </div>
+
+		 <div id="navigation">
+	    	<a href="#title-page"><div id="page1"></div></a>
+	    	<a href="#past"><div id="page2"></div></a>
+	    	<a href="#present"><div id="page3"></div></a>
+	    	<a href="#future"><div id="page4"></div></a>
+	    </div>
+	</div>
+
+	<!-- FUTURE -->
+	<div id="future">
+		 <div id="navigation">
+	    	<a href="#title-page"><div id="page1"></div></a>
+	    	<a href="#past"><div id="page2"></div></a>
+	    	<a href="#present"><div id="page3"></div></a>
+	    	<a href="#future"><div id="page4"></div></a>
+	    </div>
+	    <div id="future-content">
+			<div id="future-title">
+	    		<img src="future-title.jpg">
+	    	</div>
+	    	<div id="systems">
+	    		<div id="image-block-1">
+	    			<img src="nintendo-nx.jpg" width="256.25" height="256.25">
+	    		</div>
+	    		<div id="overlay">
+	    		</div>
+		    	<div id="text-1"> 
+		    			<h1>2015+</h1><h2>Nintendo NX</h2><p>Nintendo's next step is to incorporate smartphone technology. They have begun this step by teaming up with Dena, a provider of mobile gaming platforms.</p>
+		    	</div>
+		    	<!-- <div id="image-block-2">
+	    			<img src="nintendo-nx.jpg" width="256.25" height="256.25">
+	    		</div> -->
+	    		<div id="image-block-3">
+	    			<img src="gameboy-photo.jpg" width="256.25" height="256.25">
+	    		</div>
+	    		<div id="overlay2"></div>
+	    		<div id="overlay-text">
+	    			<h1>Sources</h1><p><a href="http://www.nintendo.com/">Nintendo</a><br> <a href="http://www.theverge.com/2014/8/29/6082561/nintendo-game-boy-3ds-xl-timeline">The Verge</a><br> <a href="http://commons.wikimedia.org/wiki/User:Evan-Amos">Evan-Amos</a> <br> <a href="http://www.japantimes.co.jp/news/2015/03/18/business/nintendo-finally-enters-smartphone-game-sector-dena-partner/#.VVTfTPlViko">Japan Times</a>
+	    		</p>
+	    		</div>
+	    		<!-- <div id="image-block-4">
+	    			<img src="nintendo-nx.jpg" width="256.25" height="256.25">
+	    		</div> -->
+	    	</div>
+	</div>
+</body>
+
+</html>
